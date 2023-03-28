@@ -1,0 +1,31 @@
+if &compatible
+  set nocompatible
+endif
+
+let g:python3_host_prog = $PYENV_ROOT . '/versions/neovim/bin/python'
+let g:loaded_python_provider = 0
+
+let mapleader = '_'
+
+filetype plugin indent on
+syntax enable
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set nobackup
+set number
+set smartcase
+set ignorecase
+set clipboard=unnamed
+
+nnoremap <slient> Q :tabp<CR>
+nnoremap <slient> Q :tabp<CR>
+nnoremap <slient> ( :copen<CR>
+nnoremap <slient> ) :cclose<CR>
+nnoremap <slient> I :cnext<CR>
+nnoremap <slient> O :cprevious<CR>
+
+lua require('plugins')
+lua require('plugin_telescope')
+lua require('plugin_vim_table_mode')
