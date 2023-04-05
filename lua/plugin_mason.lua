@@ -12,6 +12,7 @@ lspconfig.lua_ls.setup {
     }
 }
 -- lspconfig.jdtls.setup {}
+lspconfig.jsonls.setup {}
 lspconfig.pylsp.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.gopls.setup {}
