@@ -7,6 +7,7 @@ vim.opt.smartcase = true
 vim.opt.ignorecase = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 
 vim.keymap.set('n', 'Q', '<cmd>tabp<CR>', {noremap = true})
 vim.keymap.set('n', '<S-Tab>', '<cmd>tabn<CR>', {noremap = true})

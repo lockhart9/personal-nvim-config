@@ -17,6 +17,7 @@ lspconfig.pylsp.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.gopls.setup {}
 lspconfig.tailwindcss.setup {}
+lspconfig.clangd.setup{}
 lspconfig.rust_analyzer.setup {
     -- Server-specific settings. See `:help lspconfig-setup`
     settings = {
