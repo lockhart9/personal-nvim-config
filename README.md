@@ -13,6 +13,7 @@ This is my personal Neovim init.lua.
 * GNU make
 * ripgrep >= 13.0
 * fd >= 0.7
+* [Packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 # Install
 
