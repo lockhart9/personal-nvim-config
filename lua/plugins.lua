@@ -38,4 +38,7 @@ return require('packer').startup(function(use)
         config = function() require('aerial').setup() end
     }
     use "jbyuki/venn.nvim"
+    use { 'akinsho/bufferline.nvim', tag = "v4.*", requires = 'nvim-tree/nvim-web-devicons' }
+
+    -- use "~/work/jin"
 end)

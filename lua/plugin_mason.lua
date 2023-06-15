@@ -5,19 +5,28 @@ local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup {
     settings = {
         Lua = {
+            runtime = {
+                version = 'LuaJIT',
+            },
             diagnostics = {
-                globals = { 'vim' }
-            }
+                globals = { 'vim' },
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = {
+                enable = false,
+            },
         }
     }
 }
--- lspconfig.jdtls.setup {}
+lspconfig.jdtls.setup {}
 lspconfig.jsonls.setup {}
 lspconfig.pylsp.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.gopls.setup {}
 lspconfig.tailwindcss.setup {}
-lspconfig.clangd.setup{}
+lspconfig.clangd.setup {}
 lspconfig.rust_analyzer.setup {
     -- Server-specific settings. See `:help lspconfig-setup`
     settings = {
