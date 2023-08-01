@@ -25,4 +25,4 @@ vim.keymap.set('n', '<Leader>4', '<cmd>AsyncRun cargo run<CR>', {noremap = true}
 vim.keymap.set('n', '<Leader>5', '<cmd>AsyncRun cargo build<CR>', {noremap = true})
 vim.keymap.set('n', '<Leader>6', '<cmd>AsyncRun cargo build --release<CR>', {noremap = true})
 
-vim.cmd [[colorscheme desert]]
+vim.cmd [[colorscheme habamax]]
