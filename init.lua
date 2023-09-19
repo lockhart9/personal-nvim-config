@@ -17,6 +17,7 @@ vim.cmd([[
 ]])
 
 require('commons')
+require('neovide')
 require('plugins')
 require('plugin_telescope')
 require('plugin_vim_table_mode')

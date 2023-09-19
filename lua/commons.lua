@@ -28,7 +28,7 @@ vim.keymap.set('n', '<Leader>6', '<cmd>AsyncRun cargo build --release<CR>', {nor
 
 
 -- vim.cmd [[colorscheme habamax]]
-vim.cmd [[colorscheme desert]]
+vim.cmd [[colorscheme delek]]
 
 vim.keymap.set('n', '<c-g>', '<CMD>diffget<CR>', {noremap = true})
 vim.keymap.set('n', '<c-p>', '<CMD>diffput<CR>', {noremap = true})
