@@ -56,6 +56,7 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
-    use { "catppuccin/nvim", as = "catppuccin" }
+    -- use { "catppuccin/nvim", as = "catppuccin" }
+    use 'mechatroner/rainbow_csv'
     use '~/work/nvim/ponzu'
 end)
