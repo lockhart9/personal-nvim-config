@@ -27,3 +27,8 @@ require('plugin_symbols_outline')
 require('plugin_nvim_tree')
 require('plugin_aerial')
 require('plugin_venn')
+
+require('ponzu').setup {
+    a = 2,
+    b = '文字列',
+}

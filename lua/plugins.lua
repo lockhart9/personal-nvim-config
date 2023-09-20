@@ -57,4 +57,5 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
     use { "catppuccin/nvim", as = "catppuccin" }
+    use '~/work/nvim/ponzu'
 end)
