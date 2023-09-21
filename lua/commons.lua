@@ -18,6 +18,9 @@ vim.keymap.set('n', 'I', '<cmd>cnext<CR>', {noremap = true})
 vim.keymap.set('n', 'O', '<cmd>cprevious<CR>', {noremap = true})
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>', {noremap = true})
 
+-- ショートかっと
+vim.keymap.set('i', '<c-r><c-r>', '<c-r><c-">', {noremap = true})
+
 --- cargoコマンドのショートカット
 vim.keymap.set('n', '<Leader>1', '<cmd>AsyncRun cargo clippy<CR>', {noremap = true})
 vim.keymap.set('n', '<Leader>2', '<cmd>AsyncRun cargo test<CR>', {noremap = true})
