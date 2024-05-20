@@ -22,6 +22,8 @@ require('telescope').setup {
     },
 }
 
+require('telescope').load_extension('fzf')
+
 vim.keymap.set('n', '<Leader>j', '<cmd>Telescope find_files<CR>', { noremap = true })
 vim.keymap.set('n', '<Leader>v', '<cmd>Telescope oldfiles<CR>', { noremap = true })
 vim.keymap.set('n', '<Leader>g', '<cmd>Telescope live_grep<CR>', { noremap = true })
