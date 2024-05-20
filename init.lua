@@ -13,6 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.python3_host_prog = vim.env.PYENV_ROOT .. '/versions/neovim/bin/python'
 
+vim.opt.termguicolors = true
+
 
 -- Example using a list of specs with the default options
 vim.g.mapleader = "_"       -- Make sure to set `mapleader` before lazy so your mappings are correct
@@ -31,15 +33,17 @@ require("lazy").setup({
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
-    -- { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
     },
     'sainnhe/sonokai',
     'nvim-tree/nvim-web-devicons',
+    'stevearc/aerial.nvim',
     'lewis6991/gitsigns.nvim',
     'github/copilot.vim',
+    'voldikss/vim-floaterm',
 })
 
 
@@ -49,4 +53,6 @@ require('plugin_mason')
 require('plugin_nvim_cmp')
 require('plugin_nvimtreesitter')
 require('plugin_gitsign')
+require('plugin_floatterm')
+require('plugin_aerial')
 require('commons')
