@@ -28,12 +28,24 @@ lspconfig.gopls.setup {}
 lspconfig.tailwindcss.setup {}
 lspconfig.clangd.setup {}
 lspconfig.sorbet.setup {}
-lspconfig.ruby_ls.setup {}
 lspconfig.rust_analyzer.setup {
     -- Server-specific settings. See `:help lspconfig-setup`
     settings = {
-        ['rust-analyzer'] = {},
+        ['rust-analyzer'] = {
+        },
     },
+    capabilities = (function()
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
+        capabilities.textDocument.completion.completionItem.resolveSupport = {
+            properties = {
+                'documentation',
+                'detail',
+                'additionalTextEdits',
+            }
+        }
+        return capabilities
+    end)(),
 }
 lspconfig.html.setup {}
 
