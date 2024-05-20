@@ -11,15 +11,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.cmd([[
-  if &compatible
-    set nocompatible
-  endif
-  filetype plugin indent on
-  syntax enable
-]])
-
-
 vim.g.python3_host_prog = vim.env.PYENV_ROOT .. '/versions/neovim/bin/python'
 
 
@@ -40,6 +31,15 @@ require("lazy").setup({
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
+    -- { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+    },
+    'sainnhe/sonokai',
+    'nvim-tree/nvim-web-devicons',
+    'lewis6991/gitsigns.nvim',
+    'github/copilot.vim',
 })
 
 
@@ -47,4 +47,6 @@ require('plugin_telescope')
 require('plugin_vim_table_mode')
 require('plugin_mason')
 require('plugin_nvim_cmp')
+require('plugin_nvimtreesitter')
+require('plugin_gitsign')
 require('commons')
