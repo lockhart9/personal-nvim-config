@@ -33,20 +33,8 @@ vim.keymap.set('n', '<Leader>6', '<cmd>AsyncRun cargo build --release<CR>', {nor
 vim.keymap.set('n', '<Leader>n1', '<cmd>PlenaryBustedFile %<CR>', {noremap = true})
 vim.keymap.set('n', '<Leader>n2', '<cmd>PlenaryBustedDirectory .<CR>', {noremap = true})
 
-
 -- vim.cmd [[colorscheme habamax]]
 vim.cmd [[colorscheme sonokai]]
 
 vim.keymap.set('n', '<c-g>', '<CMD>diffget<CR>', {noremap = true})
 vim.keymap.set('n', '<c-p>', '<CMD>diffput<CR>', {noremap = true})
-
-
--- markdown
-vim.g.vim_markdown_folding_disabled = 1
-
-vim.cmd([[
-    autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
-    " there are some defaults for image directory and image name, you can change them
-    let g:mdip_imgdir = 'img'
-    let g:mdip_imgname = 'image'
-]])

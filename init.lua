@@ -39,6 +39,7 @@ require("lazy").setup({
     'sainnhe/sonokai',
     'nvim-tree/nvim-web-devicons',
     'lewis6991/gitsigns.nvim',
+    'github/copilot.vim',
 })
 
 
