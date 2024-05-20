@@ -22,13 +22,17 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>', {noremap = true})
 vim.keymap.set('n', '<Leader>1', '<cmd>AsyncRun cargo clippy<CR>', {noremap = true})
 vim.keymap.set('n', '<Leader>2', '<cmd>AsyncRun cargo test<CR>', {noremap = true})
 vim.keymap.set('n', '<Leader>22', '<cmd>AsyncRun cargo llvm-cov<CR>', {noremap = true})
-vim.keymap.set('n', '<Leader>4', '<cmd>AsyncRun cargo run<CR>', {noremap = true})
+vim.keymap.set('n', '<Leader>7', '<cmd>AsyncRun cargo run<CR>', {noremap = true})
 vim.keymap.set('n', '<Leader>5', '<cmd>AsyncRun cargo build<CR>', {noremap = true})
 vim.keymap.set('n', '<Leader>6', '<cmd>AsyncRun cargo build --release<CR>', {noremap = true})
 
+--- plenary test
+vim.keymap.set('n', '<Leader>n1', '<cmd>PlenaryBustedFile %<CR>', {noremap = true})
+vim.keymap.set('n', '<Leader>n2', '<cmd>PlenaryBustedDirectory .<CR>', {noremap = true})
+
 
 -- vim.cmd [[colorscheme habamax]]
-vim.cmd [[colorscheme delek]]
+vim.cmd [[colorscheme elflord]]
 
 vim.keymap.set('n', '<c-g>', '<CMD>diffget<CR>', {noremap = true})
 vim.keymap.set('n', '<c-p>', '<CMD>diffput<CR>', {noremap = true})

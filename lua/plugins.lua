@@ -24,24 +24,32 @@ return require('packer').startup(function(use)
     use 'skywind3000/asyncrun.vim'
     use 'lockhart9/vim-grep-shortcut'
     use 'img-paste-devs/img-paste.vim'
+    use 'voldikss/vim-floaterm'
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
             'nvim-tree/nvim-web-devicons',
         },
     }
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     }
-    --    use {
-    --        'nvim-treesitter/nvim-treesitter',
-    --        run = function()
-    --            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-    --            ts_update()
-    --        end,
-    --    }
+    --[[
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
+    --]]
     use 'simrat39/symbols-outline.nvim'
     use {
         'stevearc/aerial.nvim',
