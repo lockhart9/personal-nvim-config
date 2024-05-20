@@ -6,9 +6,6 @@ require('telescope').setup {
             override_file_sorter = true,
             case_mode = 'smart_case',
         },
-        file_browser = {
-            depth = 1
-        },
     },
     defaults = {
         mappings = {
@@ -24,8 +21,6 @@ require('telescope').setup {
         initial_mode = 'normal',
     },
 }
-
-require('telescope').load_extension('fzf')
 
 vim.keymap.set('n', '<Leader>j', '<cmd>Telescope find_files<CR>', { noremap = true })
 vim.keymap.set('n', '<Leader>v', '<cmd>Telescope oldfiles<CR>', { noremap = true })

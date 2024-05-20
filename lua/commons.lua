@@ -35,7 +35,7 @@ vim.keymap.set('n', '<Leader>n2', '<cmd>PlenaryBustedDirectory .<CR>', {noremap 
 
 
 -- vim.cmd [[colorscheme habamax]]
-vim.cmd [[colorscheme elflord]]
+vim.cmd [[colorscheme sonokai]]
 
 vim.keymap.set('n', '<c-g>', '<CMD>diffget<CR>', {noremap = true})
 vim.keymap.set('n', '<c-p>', '<CMD>diffput<CR>', {noremap = true})
