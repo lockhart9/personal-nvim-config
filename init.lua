@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.python3_host_prog = vim.env.PYENV_ROOT .. '/versions/neovim/bin/python'
+vim.g.ruby_host_prog = vim.env.HOME .. '/.asdf/installs/ruby/bin/neovim-ruby-host'
 
 vim.opt.termguicolors = true
 
@@ -44,6 +45,7 @@ require("lazy").setup({
     'lewis6991/gitsigns.nvim',
     'github/copilot.vim',
     'voldikss/vim-floaterm',
+    'renerocksai/telekasten.nvim',
 })
 
 
@@ -55,4 +57,5 @@ require('plugin_nvimtreesitter')
 require('plugin_gitsign')
 require('plugin_floatterm')
 require('plugin_aerial')
+require('plugin_telekasten')
 require('commons')
