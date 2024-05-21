@@ -24,6 +24,7 @@ vim.g.maplocalleader = "\\" -- Same for `maplocalleader`
 require("lazy").setup({
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',
+    'nvim-tree/nvim-tree.lua',
     'dhruvasagar/vim-table-mode',
     'skywind3000/asyncrun.vim',
     'williamboman/mason.nvim',
@@ -55,6 +56,7 @@ require('plugin_mason')
 require('plugin_nvim_cmp')
 require('plugin_nvimtreesitter')
 require('plugin_gitsign')
+require('plugin_nvim_tree')
 require('plugin_floatterm')
 require('plugin_aerial')
 require('plugin_telekasten')
