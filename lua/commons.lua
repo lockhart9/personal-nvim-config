@@ -40,3 +40,5 @@ vim.cmd [[colorscheme sonokai]]
 
 vim.keymap.set('n', '<c-g>', '<CMD>diffget<CR>', {noremap = true})
 vim.keymap.set('n', '<c-p>', '<CMD>diffput<CR>', {noremap = true})
+
+vim.keymap.set('n', '<Leader>E', "<CMD>AsyncRun nvim --headless -c 'PlenaryBustedDirectory .'<CR>", {noremap = true})
