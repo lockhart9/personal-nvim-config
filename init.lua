@@ -23,7 +23,10 @@ vim.g.maplocalleader = "\\" -- Same for `maplocalleader`
 
 require("lazy").setup({
     'nvim-lua/plenary.nvim',
-    'nvim-telescope/telescope.nvim',
+    {
+        'nvim-telescope/telescope.nvim',
+        commit = 'e9be6bb',
+    },
     'nvim-tree/nvim-tree.lua',
     'dhruvasagar/vim-table-mode',
     'skywind3000/asyncrun.vim',
