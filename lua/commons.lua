@@ -36,7 +36,7 @@ vim.keymap.set('n', '<Leader>n2', '<cmd>PlenaryBustedDirectory .<CR>', {noremap 
 -- vim.cmd [[colorscheme habamax]]
 vim.g.sonokai_style = 'espresso'
 vim.g.sonokai_better_performance = 1
-vim.cmd [[colorscheme sonokai]]
+vim.cmd [[colorscheme delek]]
 
 vim.keymap.set('n', '<c-g>', '<CMD>diffget<CR>', {noremap = true})
 vim.keymap.set('n', '<c-p>', '<CMD>diffput<CR>', {noremap = true})

@@ -22,7 +22,7 @@ lspconfig.lua_ls.setup {
 }
 lspconfig.jsonls.setup {}
 lspconfig.pylsp.setup {}
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
     root_dir = lspconfig.util.root_pattern('package.json', 'tsconfig.json', 'jsconfig.json', '.git'),
 }
 lspconfig.gopls.setup {}

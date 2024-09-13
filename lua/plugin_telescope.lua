@@ -13,11 +13,11 @@ require('telescope').setup {
                 ['q'] = 'close'
             }
         },
-        pickers = {
-            current_buffer_fuzzy_find = {
-                sorting_strategy = 'ascending',
-            },
-        },
+--          pickers = {
+--              current_buffer_fuzzy_find = {
+--                  sorting_strategy = 'ascending',
+--              },
+--          },
         initial_mode = 'normal',
     },
 }
