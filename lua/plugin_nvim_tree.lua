@@ -1,5 +1,8 @@
 require("nvim-tree").setup {
-    respect_buf_cwd = true
+    respect_buf_cwd = true,
+    update_focused_file = {
+        enable = true,
+    },
 }
 
 vim.keymap.set('n', '<Leader>3', '<cmd>NvimTreeToggle<CR>', { noremap = true })

@@ -25,7 +25,7 @@ require("lazy").setup({
     'nvim-lua/plenary.nvim',
     {
         'nvim-telescope/telescope.nvim',
-        commit = 'e9be6bb',
+        -- commit = 'e9be6bb',
     },
     'nvim-tree/nvim-tree.lua',
     'dhruvasagar/vim-table-mode',
