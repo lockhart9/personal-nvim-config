@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.python3_host_prog = vim.env.PYENV_ROOT .. '/versions/neovim/bin/python'
-vim.g.ruby_host_prog = vim.env.HOME .. '/.asdf/installs/ruby/bin/neovim-ruby-host'
+vim.g.ruby_host_prog = vim.env.HOME .. '/.asdf/installs/ruby/3.3.7/bin/neovim-ruby-host'
 
 vim.opt.termguicolors = true
 
@@ -25,14 +25,17 @@ require("lazy").setup({
     'nvim-lua/plenary.nvim',
     {
         'nvim-telescope/telescope.nvim',
-        commit = 'e9be6bb',
+        -- commit = 'e9be6bb',
     },
     'nvim-tree/nvim-tree.lua',
     'dhruvasagar/vim-table-mode',
     'skywind3000/asyncrun.vim',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig',
+    {
+        'neovim/nvim-lspconfig',
+        -- commit = '056f569',
+    },
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
@@ -48,11 +51,33 @@ require("lazy").setup({
     'stevearc/aerial.nvim',
     'lewis6991/gitsigns.nvim',
     'github/copilot.vim',
+    {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        dependencies = {
+            { "github/copilot.vim" },                       -- or zbirenbaum/copilot.lua
+            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+        },
+        build = "make tiktoken",                            -- Only on MacOS or Linux
+        opts = {
+            -- See Configuration section for options
+        },
+        -- See Commands section for default commands if you want to lazy load on them
+    },
     'voldikss/vim-floaterm',
     'renerocksai/telekasten.nvim',
+    'vim-scripts/Align',
     'lockhart9/oic',
+    -- 'lockhart9/pomo',
+    {
+        "pomo",
+        dir = "~/work/pomo",
+        opts = {
+            -- プラグインの設定
+        },
+        -- 開発中は常に最新を読み込む
+        dev = true,
+    }
 })
-
 
 require('plugin_telescope')
 require('plugin_vim_table_mode')
@@ -64,6 +89,8 @@ require('plugin_nvim_tree')
 require('plugin_floatterm')
 require('plugin_aerial')
 require('plugin_telekasten')
+require('plugin_align')
+require('plugin_copilot_chat')
 require('commons')
 require('freee')
 require('plugin_oic')

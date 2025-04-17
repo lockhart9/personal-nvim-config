@@ -29,6 +29,7 @@ lspconfig.gopls.setup {}
 lspconfig.tailwindcss.setup {}
 lspconfig.clangd.setup {}
 lspconfig.solargraph.setup {}
+lspconfig.terraformls.setup{}
 lspconfig.rust_analyzer.setup {
     -- Server-specific settings. See `:help lspconfig-setup`
     settings = {

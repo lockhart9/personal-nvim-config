@@ -1,1 +1,1 @@
-vim.keymap.set('n', 'T', '<CMD>FloatermToggle<CR>', { noremap = true })
+vim.keymap.set('n', '<Leader>4', '<CMD>FloatermToggle<CR>', { noremap = true })
