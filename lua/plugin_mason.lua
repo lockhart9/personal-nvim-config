@@ -25,6 +25,34 @@ lspconfig.pylsp.setup {}
 lspconfig.ts_ls.setup {
     root_dir = lspconfig.util.root_pattern('package.json', 'tsconfig.json', 'jsconfig.json', '.git'),
 }
+
+lspconfig.sqlls.setup {
+    settings = {
+        connections = {
+            {
+                name = "hakobune",
+                adapter = "mysql",
+                host = "localhost",
+                port = 3306,
+                user = "root",
+                password = "hakobune",
+                database = "hakobune",
+                projectPaths = { "/Users/shotaro/work/hakobune/hakobune" },
+            },
+            {
+                name = "diamond",
+                adapter = "mysql",
+                host = "localhost",
+                port = 3306,
+                user = "root",
+                password = "hakobune",
+                database = "diamond",
+                projectPaths = { "/Users/shotaro/work/hakobune/diamond-dust-server" },
+            },
+        }
+    },
+}
+
 lspconfig.gopls.setup {}
 lspconfig.tailwindcss.setup {}
 lspconfig.clangd.setup {}

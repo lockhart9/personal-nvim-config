@@ -1,29 +1,18 @@
 " Enable Mouse
 set mouse=a
 
-" Set Editor Font
-if exists(':GuiFont')
-    " Use GuiFont! to ignore font errors
-    GuiFont Hack Nerd Font Mono:h11
-endif
+if exists("g:neovide")
+    " Set Editor Font
+        " Use GuiFont! to ignore font errors
+    set guifont=Hack\ Nerd\ Font\ Mono:h10"
 
-" Disable GUI Tabline
-if exists(':GuiTabline')
-    GuiTabline 0
-endif
+    let g:neovide_transparency = 0.9
+    let g:transparency = 0.8
+    " let g:neovide_background_color = '#0f1117'.printf('%x', float2nr(255 * g:transparency))
 
-" Disable GUI Popupmenu
-if exists(':GuiPopupmenu')
-    GuiPopupmenu 0
-endif
-
-" Enable GUI ScrollBar
-if exists(':GuiScrollBar')
-    GuiScrollBar 1
-endif
-
-" Right Click Context Menu (Copy-Cut-Paste)
-nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>
-inoremap <silent><RightMouse> <Esc>:call GuiShowContextMenu()<CR>
-xnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>gv
-snoremap <silent><RightMouse> <C-G>:call GuiShowContextMenu()<CR>gv
+    " Right Click Context Menu (Copy-Cut-Paste)
+    nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>
+    inoremap <silent><RightMouse> <Esc>:call GuiShowContextMenu()<CR>
+    xnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>gv
+    snoremap <silent><RightMouse> <C-G>:call GuiShowContextMenu()<CR>gv
+end
