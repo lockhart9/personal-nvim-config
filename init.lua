@@ -50,7 +50,7 @@ require("lazy").setup({
     'github/copilot.vim',
     'voldikss/vim-floaterm',
     'renerocksai/telekasten.nvim',
-    'lockhart9/oic',
+    -- 'lockhart9/oic',
 })
 
 
@@ -65,5 +65,5 @@ require('plugin_floatterm')
 require('plugin_aerial')
 require('plugin_telekasten')
 require('commons')
-require('freee')
-require('plugin_oic')
+-- require('freee')
+-- require('plugin_oic')

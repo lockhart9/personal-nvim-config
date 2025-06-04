@@ -52,6 +52,11 @@ lspconfig.sqlls.setup {
         }
     },
 }
+lspconfig.terraformls.setup {
+  -- cmd = { "terraform-ls", "serve" },
+  filetypes = { "terraform", "tf" },
+  root_dir = lspconfig.util.root_pattern(".terraform", ".git", "main.tf"),
+}
 
 lspconfig.gopls.setup {}
 lspconfig.tailwindcss.setup {}
