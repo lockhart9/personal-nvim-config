@@ -1,4 +1,6 @@
 {
+  "Align": { "branch": "master", "commit": "787662fe90cd057942bc5b682fd70c87e1a9dd77" },
+  "CopilotChat.nvim": { "branch": "main", "commit": "16d897fd43d07e3b54478ccdb2f8a16e4df4f45a" },
   "aerial.nvim": { "branch": "master", "commit": "2e00d1d4248f08dddfceacb8d2996e51e13e00f6" },
   "asyncrun.vim": { "branch": "master", "commit": "e17c49c67d1dd847cd1d7d6077a7168816f546cc" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
@@ -15,6 +17,7 @@
   "nvim-tree.lua": { "branch": "master", "commit": "25d16aab7d29ca940a9feb92e6bb734697417009" },
   "nvim-treesitter": { "branch": "master", "commit": "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79" },
   "nvim-web-devicons": { "branch": "master", "commit": "1fb58cca9aebbc4fd32b086cb413548ce132c127" },
+  "oic": { "branch": "main", "commit": "adcb83a048552b39155e1fd3b56f25a377429dfa" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "sonokai": { "branch": "master", "commit": "f59c796780655c3b9da442d310ad2f2d735f2e56" },
   "telekasten.nvim": { "branch": "main", "commit": "6a10a7929421d6e696e46bbc5aa5627a8cbcf61d" },

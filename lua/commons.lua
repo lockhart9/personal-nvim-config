@@ -53,3 +53,17 @@ vim.api.nvim_create_user_command("CleanHiddenBuffers", function()
         end
     end
 end, {})
+
+-- yank filepath
+local function get_path(mods)
+    return vim.fn.fnamemodify(vim.fn.expand("%"), mods)
+end
+
+local function copy_to_clipboard(path)
+    vim.fn.setreg("+", path)
+    vim.api.nvim_echo({ { "Copied: " .. path } }, false, {})
+end
+
+vim.api.nvim_create_user_command("CopyRelativeFilePath", function()
+    copy_to_clipboard(get_path(":."))
+end, { nargs = 0, force = true, desc = "Copy relative file path to the clipboard" })
