@@ -1,10 +1,7 @@
 require('mason').setup()
-require('mason-lspconfig').setup {
-    automatic_enable = false,
-}
+require('mason-lspconfig').setup {}
 
-local lspconfig = require('lspconfig')
-lspconfig.lua_ls.setup {
+vim.lsp.config('lua_ls', {
     settings = {
         Lua = {
             runtime = {
@@ -21,14 +18,9 @@ lspconfig.lua_ls.setup {
             },
         }
     }
-}
-lspconfig.jsonls.setup {}
-lspconfig.pylsp.setup {}
-lspconfig.ts_ls.setup {
-    root_dir = lspconfig.util.root_pattern('package.json', 'tsconfig.json', 'jsconfig.json', '.git'),
-}
+})
 
-lspconfig.sqlls.setup {
+vim.lsp.config('sqlls', {
     settings = {
         connections = {
             {
@@ -53,20 +45,14 @@ lspconfig.sqlls.setup {
             },
         }
     },
-}
-lspconfig.terraformls.setup {
+})
+
+vim.lsp.config('terraformls', {
   -- cmd = { "terraform-ls", "serve" },
   filetypes = { "terraform", "tf" },
-  root_dir = lspconfig.util.root_pattern(".terraform", ".git", "main.tf"),
-}
+})
 
-lspconfig.gopls.setup {}
-lspconfig.tailwindcss.setup {}
-lspconfig.clangd.setup {}
-lspconfig.solargraph.setup {}
-lspconfig.terraformls.setup {}
-lspconfig.rust_analyzer.setup {
-    -- Server-specific settings. See `:help lspconfig-setup`
+vim.lsp.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {
         },
@@ -83,8 +69,7 @@ lspconfig.rust_analyzer.setup {
         }
         return capabilities
     end)(),
-}
-lspconfig.html.setup {}
+})
 
 
 -- Global mappings.
@@ -124,3 +109,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end, opts)
     end,
 })
+
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('jsonls')
+vim.lsp.enable('pylsp')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('sqlls')
+vim.lsp.enable('terraformls')
+vim.lsp.enable('gopls')
+vim.lsp.enable('tailwindcss')
+vim.lsp.enable('solargraph')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('html')
