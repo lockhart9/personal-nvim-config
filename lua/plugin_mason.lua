@@ -48,8 +48,8 @@ vim.lsp.config('sqlls', {
 })
 
 vim.lsp.config('terraformls', {
-  -- cmd = { "terraform-ls", "serve" },
-  filetypes = { "terraform", "tf" },
+    -- cmd = { "terraform-ls", "serve" },
+    filetypes = { "terraform", "tf" },
 })
 
 vim.lsp.config('rust_analyzer', {
@@ -84,8 +84,19 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
+        local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
+        -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
+        if client:supports_method('textDocument/completion') then
+            -- Optional: trigger autocompletion on EVERY keypress. May be slow!
+            -- local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
+            -- client.server_capabilities.completionProvider.triggerCharacters = chars
+            -- vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+            vim.lsp.completion.enable(true, client.id, ev.buf)
+        end
+
         -- Enable completion triggered by <c-x><c-o>
-        vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+        -- -- -- -- -- -- -- -- -- vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
 
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions

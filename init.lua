@@ -36,11 +36,11 @@ require("lazy").setup({
         'neovim/nvim-lspconfig',
         -- commit = '056f569',
     },
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/nvim-cmp',
+    -- 'hrsh7th/cmp-nvim-lsp',
+    -- 'hrsh7th/cmp-buffer',
+    -- 'hrsh7th/cmp-path',
+    -- 'hrsh7th/cmp-cmdline',
+    -- 'hrsh7th/nvim-cmp',
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     {
         "nvim-treesitter/nvim-treesitter",
@@ -82,7 +82,7 @@ require("lazy").setup({
 require('plugin_telescope')
 require('plugin_vim_table_mode')
 require('plugin_mason')
-require('plugin_nvim_cmp')
+-- require('plugin_nvim_cmp')
 require('plugin_nvimtreesitter')
 require('plugin_gitsign')
 require('plugin_nvim_tree')
